@@ -271,11 +271,11 @@ EXTREPO.url=${artiUrl}
             steps {
                 script{
                     echo "srcGitBranch is ${srcGitBranch}"
-                    if ( srcGitBranch == 'feature1') {
+                    if ( srcGitBranch.contains('feature1') ) {
                         def ucdEnv = 'Development'
                         echo "ucdEnv is ${ucdEnv}"
                     }
-                    if ( srcGitBranch == 'release') {
+                    if ( srcGitBranch.contains('release') ) {
                         def ucdEnv = 'Test'
                     }
                     if ( hasBuildFiles ) {
