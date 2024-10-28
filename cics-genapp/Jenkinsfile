@@ -29,7 +29,7 @@ def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/mdesu'
 def ucdApplication = 'meena-GenApp-Deploy'
 def ucdProcess = 'Deploy'
 def ucdComponent = 'meena-GenAppComponent'
-def ucdEnv = 'Test'
+//def ucdEnv = 'Test'
 def ucdSite = 'Jenkins2UCDServer'
 def ucdBuztool = '/var/ucd/v73/bin/buztool.sh'
 
