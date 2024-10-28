@@ -279,17 +279,20 @@ EXTREPO.url=${artiUrl}
                         def ucdEnv = 'Test'
                     }
                     if ( hasBuildFiles ) {
+                        echo "inside if "
                         script{
+                            echo "inside script "
                             step(
-                                  [$class: 'UCDeployPublisher',
-                                    deploy: [
-                                        deployApp: ucdApplication,
-                                        deployDesc: 'Requested from Jenkins',
-                                        deployEnv: ucdEnv,
-                                        deployOnlyChanged: false,
-                                        deployProc: ucdProcess,
-                                        deployVersions: ucdComponent + ':latest'],
-                                    siteName: ucdSite])
+                                [$class: 'UCDeployPublisher',
+                                 deploy: [
+                                     deployApp: ucdApplication,
+                                     deployDesc: 'Requested from Jenkins',
+                                     deployEnv: ucdEnv,
+                                     deployOnlyChanged: false,
+                                     deployProc: ucdProcess,
+                                     deployVersions: ucdComponent + ':latest'],
+                                 siteName: ucdSite])
+                            echo "after step"
                         }
                     }
                 }
