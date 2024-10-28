@@ -9,6 +9,7 @@ def zAppBuildGitRepo = 'http://MVPGitLabServer1.fyre.ibm.com/dbb310/dbb320/dbb-z
 def zAppBuildGitBranch = 'main'
 def dbbGitRepo = 'http://mvpgitlabserver1.fyre.ibm.com/dbb310/dbb'
 def dbbGitBranch = 'main'
+def branch = env.GIT_BRANCH
 
 // DBB
 def dbbHome='/var/dbb'
@@ -28,7 +29,7 @@ def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/mdesu'
 def ucdApplication = 'meena-GenApp-Deploy'
 def ucdProcess = 'Deploy'
 def ucdComponent = 'meena-GenAppComponent'
-//def ucdEnv = 'Test'
+def ucdEnv = 'Test'
 def ucdSite = 'Jenkins2UCDServer'
 def ucdBuztool = '/var/ucd/v73/bin/buztool.sh'
 
@@ -268,12 +269,12 @@ EXTREPO.url=${artiUrl}
          
             steps {
                 script{
-                    if ( env.GIT_BRANCH == 'feature1') {
+                    if ( branch == 'feature1') {
                        def ucdEnv = 'Development'
                         echo "current branch ${env.GIT_BRANCH}"
                         echo "ucdEnv is ${ucdEnv}"
                     }
-                    if ( env.GIT_BRANCH == 'release') {
+                    if ( branch == 'release') {
                        def ucdEnv = 'Test'
                     }
                     if ( hasBuildFiles ) {
