@@ -111,6 +111,7 @@ pipeline {
                         sh(script: 'rm -f .git/info/sparse-checkout', returnStdout: true)
                         srcGitRepo = scm.getUserRemoteConfigs()[0].getUrl()
                         srcGitBranch = scm.branches[0].name
+                        echo "srcGitBranch is : ${srcGitBranch}"
                         def scmVars = null
                         scmVars = checkout([$class: 'GitSCM', branches: [[name: srcGitBranch]],
                                                 doGenerateSubmoduleConfigurations: false,
@@ -269,12 +270,12 @@ EXTREPO.url=${artiUrl}
          
             steps {
                 script{
-                    echo "current branch ${env.GIT_BRANCH}"
-                    if ( env.GIT_BRANCH == 'feature1') {
+                    echo "srcGitBranch is ${srcGitBranch}"
+                    if ( srcGitBranch == 'feature1') {
                         def ucdEnv = 'Development'
                         echo "ucdEnv is ${ucdEnv}"
                     }
-                    if ( env.GIT_BRANCH == 'release') {
+                    if ( srcGitBranch == 'release') {
                         def ucdEnv = 'Test'
                     }
                     if ( hasBuildFiles ) {
