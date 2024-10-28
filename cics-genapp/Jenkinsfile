@@ -270,6 +270,8 @@ EXTREPO.url=${artiUrl}
                 script{
                     if ( env.GIT_BRANCH == 'feature1') {
                        def ucdEnv = 'Development'
+                        echo "current branch ${env.GIT_BRANCH}"
+                        echo "ucdEnv is ${ucdEnv}"
                     }
                     if ( env.GIT_BRANCH == 'release') {
                        def ucdEnv = 'Test'
