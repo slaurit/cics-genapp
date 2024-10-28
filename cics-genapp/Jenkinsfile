@@ -269,9 +269,9 @@ EXTREPO.url=${artiUrl}
          
             steps {
                 script{
+                    echo "current branch ${branch}"
                     if ( branch == 'feature1') {
                        def ucdEnv = 'Development'
-                        echo "current branch ${branch}"
                         echo "ucdEnv is ${ucdEnv}"
                     }
                     if ( branch == 'release') {
