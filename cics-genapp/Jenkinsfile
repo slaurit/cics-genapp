@@ -29,7 +29,7 @@ def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/mdesu'
 def ucdApplication = 'meena-GenApp-Deploy'
 def ucdProcess = 'Deploy'
 def ucdComponent = 'meena-GenAppComponent'
-//def ucdEnv = 'Test'
+def ucdEnv = 'xxxx'
 def ucdSite = 'Jenkins2UCDServer'
 def ucdBuztool = '/var/ucd/v73/bin/buztool.sh'
 
@@ -272,11 +272,11 @@ EXTREPO.url=${artiUrl}
                 script{
                     echo "srcGitBranch is ${srcGitBranch}"
                     if ( srcGitBranch.contains('feature1') ) {
-                        def ucdEnv = 'Development'
+                        ucdEnv = 'Development'
                         echo "ucdEnv is ${ucdEnv}"
                     }
                     if ( srcGitBranch.contains('release') ) {
-                        def ucdEnv = 'Test'
+                        ucdEnv = 'Test'
                     }
                     if ( hasBuildFiles ) {
                         echo "inside if "
