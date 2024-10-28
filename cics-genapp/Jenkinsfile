@@ -271,11 +271,11 @@ EXTREPO.url=${artiUrl}
                 script{
                     echo "current branch ${branch}"
                     if ( branch == 'feature1') {
-                       def ucdEnv = 'Development'
+                        def ucdEnv = 'Development'
                         echo "ucdEnv is ${ucdEnv}"
                     }
                     if ( branch == 'release') {
-                       def ucdEnv = 'Test'
+                        def ucdEnv = 'Test'
                     }
                     if ( hasBuildFiles ) {
                         script{
@@ -291,8 +291,8 @@ EXTREPO.url=${artiUrl}
                                     siteName: ucdSite])
                         }
                     }
-                  }      
                 }
             }
-        }           
-  }
+        }
+    }           
+}
