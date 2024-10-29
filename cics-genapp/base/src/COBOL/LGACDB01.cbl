@@ -26,7 +26,7 @@
       *  SAJ DEVELOP
       *  CRP 07/10/2023
       *  MEENA DEMO TESTM DEMO
-      * MEENA FEATURE1
+      * MEENA FEATURE1 DEMO
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LGACDB01.
