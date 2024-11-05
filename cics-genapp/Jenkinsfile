@@ -1,6 +1,6 @@
 // Agent labels
-def zOsAgentLabel = env.ZOS_AGENT_LABEL ? env.ZOS_AGENT_LABEL : 'slaurit-zOS-agent'
-def linuxAgent = 'main'
+def zOsAgentLabel = env.ZOS_AGENT_LABEL ? env.ZOS_AGENT_LABEL : 'Scott zOS Agent'
+def linuxAgent = 'master'
 
 // GIT repositories
 def srcGitRepo =  'https://github.com/slaurit/cics-genapp.git'
@@ -15,13 +15,14 @@ def dbbGitBranch = 'main'
 def dbbHome='/var/dbb'
 def dbbUrl='https://mvpserver1.fyre.ibm.com:9443/dbb'
 def dbbHlq='SLAURIT.DEMO'
-def dbbBuildType='--fullBuild --scanOnly'
+//def dbbBuildType='--fullBuild --scanOnly'
+def dbbBuildType='-i'
 def dbbGroovyzOpts= '-Dorg.slf4j.simpleLogger'
 def dbbBuildExtraOpts= ''
 def dbbCredentialOptions='-id SLAURIT -pf /u/slaurit/password.txt --url jdbc:db2://tvt7111.svl.ibm.com:5050/DBC1 '
 
 // Artifactory
-def artiCredentialsId = 'scott-artifcatory_id'
+def artiCredentialsId = 'scott-artifactory_id'
 def ARTIFACTORY_URL='https://na.artifactory.swg-devops.com/artifactory/'
 def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/slaurit'
 

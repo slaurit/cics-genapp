@@ -19,13 +19,7 @@
       *  DB2 customer table creating a new customer entry.             *
       *                                                                *
       *
-      *  RLAM 06/04/2021 10:11 Test Code Coverage
-      *  SAJ 06/01/2023
-      *  SAJ 06/05/2023
-      *  SAJ 06/13/2023
-      *  SAJ DEVELOP
-      *  CRP 07/10/2023
-      *  MEENA DEMO
+      *  SCOTT DEMO 1
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LGACDB01.
