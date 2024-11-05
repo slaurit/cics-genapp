@@ -1,9 +1,9 @@
 // Agent labels
-def zOsAgentLabel = env.ZOS_AGENT_LABEL ? env.ZOS_AGENT_LABEL : 'mdesu-zOS-agent'
-def linuxAgent = 'master'
+def zOsAgentLabel = env.ZOS_AGENT_LABEL ? env.ZOS_AGENT_LABEL : 'slaurit-zOS-agent'
+def linuxAgent = 'main'
 
 // GIT repositories
-def srcGitRepo =  'https://github.com/Meenadesu/dbb-pipeline.git'
+def srcGitRepo =  'https://github.com/slaurit/cics-genapp.git'
 def srcGitBranch = 'main'
 def zAppBuildGitRepo = 'http://MVPGitLabServer1.fyre.ibm.com/dbb310/dbb320/dbb-zappbuild.git'
 def zAppBuildGitBranch = 'main'
@@ -14,21 +14,21 @@ def dbbGitBranch = 'main'
 // DBB
 def dbbHome='/var/dbb'
 def dbbUrl='https://mvpserver1.fyre.ibm.com:9443/dbb'
-def dbbHlq='MDESU.DEMO'
-def dbbBuildType='-i'
+def dbbHlq='SLAURIT.DEMO'
+def dbbBuildType='--fullBuild --scanOnly'
 def dbbGroovyzOpts= '-Dorg.slf4j.simpleLogger'
 def dbbBuildExtraOpts= ''
-def dbbCredentialOptions='-id MDESU -pf /u/mdesu/password.txt --url jdbc:db2://tvt7111.svl.ibm.com:5050/DBC1 '
+def dbbCredentialOptions='-id SLAURIT -pf /u/slaurit/password.txt --url jdbc:db2://tvt7111.svl.ibm.com:5050/DBC1 '
 
 // Artifactory
-def artiCredentialsId = 'meenaArtifcatoryID'
+def artiCredentialsId = 'scott-artifcatory_id'
 def ARTIFACTORY_URL='https://na.artifactory.swg-devops.com/artifactory/'
-def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/mdesu'
+def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/slaurit'
 
 // UCD
-def ucdApplication = 'meena-GenApp-Deploy'
+def ucdApplication = 'scott-GenApp-Deploy'
 def ucdProcess = 'Deploy'
-def ucdComponent = 'meena-GenAppComponent'
+def ucdComponent = 'scott-GenAppComponent'
 def ucdEnv = 'xxxx'
 def ucdSite = 'Jenkins2UCDServer'
 def ucdBuztool = '/var/ucd/v73/bin/buztool.sh'
@@ -69,9 +69,9 @@ pipeline {
         DBB_CONF='/var/dbb/conf'
     //  DBB_URL='https://dbbsample-dbb-route-dbbns.apps.mvpopenshift.cp.fyre.ibm.com/dbb/'
         DBB_URL='https://mvpserver1.fyre.ibm.com:9443/dbb'
-        DBB_HLQ='MDESU.DEMO'
+        DBB_HLQ='SLAURIT.DEMO'
         ARTIFACTORY_URL='https://na.artifactory.swg-devops.com/artifactory'
-        ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/mdesu'
+        ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/slaurit'
 //        ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/PriyaGenapp'
         UCD_BUZTOOL_PATH='/var/ucd/v73/bin/buztool.sh'
         UCD_HOME='/var/ucd/v73'
