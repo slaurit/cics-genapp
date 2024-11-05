@@ -1,6 +1,6 @@
 // Agent labels
-def zOsAgentLabel = env.ZOS_AGENT_LABEL ? env.ZOS_AGENT_LABEL : 'slaurit-zOS-agent'
-def linuxAgent = 'main'
+def zOsAgentLabel = env.ZOS_AGENT_LABEL ? env.ZOS_AGENT_LABEL : 'Scott zOS Agent'
+def linuxAgent = 'master'
 
 // GIT repositories
 def srcGitRepo =  'https://github.com/slaurit/cics-genapp.git'
