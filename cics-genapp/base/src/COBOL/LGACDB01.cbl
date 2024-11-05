@@ -19,7 +19,7 @@
       *  DB2 customer table creating a new customer entry.             *
       *                                                                *
       *
-      *  SCOTT DEMO 1
+      *  SCOTT DEMO 1 2
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LGACDB01.
