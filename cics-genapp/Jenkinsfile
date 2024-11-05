@@ -21,7 +21,7 @@ def dbbBuildExtraOpts= ''
 def dbbCredentialOptions='-id SLAURIT -pf /u/slaurit/password.txt --url jdbc:db2://tvt7111.svl.ibm.com:5050/DBC1 '
 
 // Artifactory
-def artiCredentialsId = 'scott-artifcatory_id'
+def artiCredentialsId = 'scott-artifactory_id'
 def ARTIFACTORY_URL='https://na.artifactory.swg-devops.com/artifactory/'
 def ARTIFACTORY_REPO_PATH='hyc-mvp-team-maven-local/slaurit'
 
